@@ -1,0 +1,58 @@
+<html>
+
+  <head>
+    <title>Video Player</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Condensed&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <h1 id="video-title">Super Mario Bros</h1>
+
+    <div class='gaming'>
+      <img src = "gamemachine.png" class = "arcade">
+      <video src = "stage1-1.mp4" autoplay></video>
+      <progress max = "100"></progress>
+      <div class="options">
+
+      </div>
+    </div>
+
+    <script>
+      function progress(){
+        var myVideo = $('video')[0];
+        var time = myVideo.currentTime;
+        var duration = myVideo.duration;
+        var percentage = (time / duration) * 100;
+        var progress = Math.round(percentage);
+      $('progress').val(progress);
+      }
+      $('video').on('timeupdate', progress);
+
+      function playPause(){
+        var video = $("video")[0];
+
+        if (video.paused) {
+          video.play();
+
+
+        } else{
+          video.pause();
+
+
+        }
+
+
+
+
+      }
+      $('video').click(playPause);
+
+
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Music band</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania|Roboto+Condensed" rel="stylesheet">
+  </head>
+  <body>
+    <h1>The Beatles</h1>
+    <img src = 'images/kick.png' class = "drumset-part" id = 'kick' onclick = "play('kick-audio');">
+    <audio src="sounds/kick.mp3" preload id= "kick-audio"></audio>
+
+    <img src = "images/crash.png" class = "drumset-part" id = 'crash' onclick = "play('crash-audio');">
+    <audio src="sounds/crash.mp3" preload id= "crash-audio"></audio>
+    
+    <img src = "images/snare.png" class = "drumset-part" id = "snare" onclick = "play('snare-audio');">
+    <audio src="sounds/snare.mp3" preload id= "snare-audio"></audio>
+
+    <img src = "images/tom.png" class = "drumset-part" id = "tom" onclick = "play('tom-audio');">
+    <audio src="sounds/tom.mp3" preload id= "tom-audio"></audio>
+
+    <img src = "images/tomleft.png" class = "drumset-part" id = "toml" onclick = "play('tomleft-audio');">
+    <audio src="sounds/tomleft.mp3" preload id= "tomleft-audio"></audio>
+
+    <img src = "images/tomright.png" class = "drumset-part" id = "tomr" onclick = "play('tomright-audio');">
+    <audio src="sounds/tomright.mp3" preload id= "tomright-audio"></audio>
+
+    <img src = "images/hihat.png" class = "drumset-part" id = "hihat" onclick = "play('hihat-audio');">
+    <audio src="sounds/hihat.mp3" preload id= "hihat-audio"></audio>
+    <script>
+
+      function play(audioId){
+        var audio = document.getElementById(audioId)
+        audio.currentTime = 0;
+        audio.play();
+
+      }
+
+    </script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Talking Bot!</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rye|Ubuntu+Condensed&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <h1> Let's talk </h1>
+    <button onclick = "Talk();"> click here to talk</button>
+    <script>
+      function Talk(){
+        var msg, reply;
+        msg = prompt("Enter your message: ");
+        if (msg == "hi"){
+          reply = "hello human";
+
+        } else if (msg == "what do you like to do"){
+          reply = "I can make pizza";
+
+        } else if (msg == "what is your favorite coulor"){
+          reply = "blue";
+
+        } else if (msg == "what is your favorite game"){
+          reply = "i like tic-tac-toe";
+
+        } else if (msg == "what is your favorite place"){
+          reply = "i like california!";
+
+        } else if (msg == "what is your favorite food"){
+          reply = "i like to eat RAM";
+
+        } else{
+          reply = "I do not understand"
+
+
+        }
+
+
+        document.body.innerHTML = document.body.innerHTML + "<p>" + msg + "</p>" +
+                                                                "<p>" + reply + "</p>";
+
+      }
+      Talk();
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+}
+
+#heading {
+    background-color: #cc7508;
+    color: white;
+    font-family: 'Grenze Gotisch', cursive;
+    font-weight: normal;
+    font-size: 64px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Staatliches', cursive;
+}
+
+.card {
+  width:300px;
+  display:inline-block;
+  margin:20px;
+  padding:10px;
+  background-color: #ffeaa7;
+  border-radius:10px;
+
+
+
+
+}
+
+img{
+  width:300px;
+
+
+
+}

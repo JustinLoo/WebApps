@@ -1,0 +1,90 @@
+body {
+  	background-color: white;
+    text-align: center;
+    width:850px;
+    height: 450px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+h1 {
+  font-family: Metal Mania, cursive;
+  font-weight: normal;
+  font-size: 48px;
+  text-align: center;
+  color: black;
+
+
+
+}
+#kick {
+  width: 160px;
+  bottom: 10px;
+  left: 360px;
+
+
+}
+
+#snare {
+  width: 90px;
+  bottom: 10px;
+  left: 500px;
+
+
+}
+
+#crash {
+  width: 100px;
+  bottom: 10px;
+  left: 160px;
+
+
+}
+
+#tom {
+  width: 120px;
+  bottom: 10px;
+  left: 230px;
+
+
+}
+
+#toml {
+  width: 100px;
+  bottom: 150px;
+  left: 325px;
+
+
+}
+
+#tomr {
+  width: 100px;
+  bottom: 150px;
+  left: 425px;
+
+
+}
+
+#hihat {
+  width: 80px;
+  bottom: 10px;
+  left: 580px;
+
+
+}
+
+.drumset-part {
+  position: absolute;
+
+
+}
+
+#bg-music{
+  width: 100px;
+  position: absolute;
+  left: 580px;
+
+
+}

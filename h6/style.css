@@ -1,0 +1,57 @@
+body {
+  background-image: url('scene.jpg');
+  background-size: contain;
+}
+
+h1, h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: normal;
+  color: white;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.gaming {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  background-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+video {
+  width:245px;
+  position:absolute;
+  top:137px;
+  left: 70px;
+  border-radius:10px;
+
+
+
+}
+
+.options {
+  display: inline-block;
+  position: absolute;
+  margin: 10px;
+}
+.arcade {
+  width: 385px;
+
+
+
+}
+
+progress {
+  width:300px;
+  position:absolute;
+  top:10px;
+  left: 40px;
+  height: 40px;
+  border-radius:10px;
+
+
+
+}

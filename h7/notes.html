@@ -1,0 +1,98 @@
+<html>
+
+  <head>
+    <title>Quick Notes</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <h1> Quick Notes </h1>
+    <div class="options">
+      <button id="add">Add note</button>
+      <button id="save">Save notes</button>
+    </div>
+
+    <div class="note-template">
+      <div class='note'>
+        <img src="delete.png" class="delete-icon">
+        <h3 class='title' contenteditable="true">This is title</h3>
+        <p class='content' contenteditable="true">To get started, all you need to do is delete this text (seriously,
+          just highlight it and hit delete), and fill this pad with your own fantastic words. You can even change the
+          title!</p>
+      </div>
+    </div>
+
+    <div class="notebook">
+
+    </div>
+
+    <script>
+      function randomColor() {
+        var colorset = [
+          '#f2a365',
+          '#29c7ac',
+          '#f9d276',
+          '#ffd700'
+        ];
+
+        var randomNum = Math.random()*colorset.length;
+        var randomIndex = Math.floor(randomNum);
+        return colorset[randomIndex];
+      }
+
+      function addNote() {
+        var noteHtml = $('.note-template').html();
+        $('.notebook').prepend(noteHtml);
+
+        var allNotes = $('.notebook').children();
+        var firstNote = allNotes[0];
+        $(firstNote).css('background-color', randomColor());
+
+        $('.delete-icon').click(deleteNote);
+        saveNote();
+      }
+
+      $('#add').click(addNote);
+
+      function deleteNote(eventObj) {
+        var clickedIcon = eventObj.currentTarget;
+        var note = $(clickedIcon).parent();
+        note.remove();
+        saveNote();
+      }
+
+      function saveNote() {
+        var allNotes = $('.notebook').children();
+        localStorage.setItem('totalNotes', allNotes.length);
+        for (var counter = 0; counter < allNotes.length; counter++) {
+          var currentNote = allNotes[counter];
+
+          var note = $(currentNote).html();
+          localStorage.setItem('note'+counter, note);
+
+          var bgcolor = $(currentNote).css('background-color');
+          localStorage.setItem('noteColor'+counter, bgcolor);
+        }
+      }
+
+      $('#save').click(saveNote);
+
+      var total = localStorage.getItem('totalNotes');
+
+      for (var i=0; i<total; i++) {
+        var note = localStorage.getItem('note'+i);
+        var bgcolor = localStorage.getItem('noteColor'+i);
+
+        $('.notebook').append("<div class='note' style='background-color:"+bgcolor+"'>"+note+"</div>");
+        $('.delete-icon').click(deleteNote);
+
+      }
+
+
+    </script>
+  </body>
+
+</html>

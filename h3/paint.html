@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Painting</title>
+        <link rel='stylesheet' href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>My Canvas</h1>
+
+        <div class="color-picker">
+          <div class = "color" style = "background-color:red;" onclick="changeColor(this);"></div>
+          <div class = "color" style = "background-color:blue;" onclick="changeColor(this);"></div>
+          <div class = "color" style = "background-color:green;" onclick="changeColor(this);"> </div>
+          <div class = "color" style = "background-color:black;" onclick="changeColor(this);"> </div>
+          <div class = "color" style = "background-color:yellow;" onclick="changeColor(this);"> </div>
+          <div class = "color" style = "background-color:purple;" onclick="changeColor(this);"> </div>
+          <div class = "color" style = "background-color:orange;" onclick="changeColor(this);"> </div>
+           <div id="canvas"></div>
+
+
+          <script>
+            var name = document.getElementById('canvas');
+            for(var i=0; i<200; i=i+1){
+              canvas.innerHTML += "<div class='box' onclick='fillCanvas(this);'</div>";
+
+
+            }
+
+            var selectedColor = "red";
+
+            function fillCanvas(box){
+              box.style.backgroundColor = selectedColor;
+              box.style.borderColor = selectedColor;
+
+
+
+            }
+
+            function changeColor(colorBox){
+              selectedColor = colorBox.style.backgroundColor;
+              document.getElementById('selected').style.backgroundColor = selectedColor;
+
+
+            }
+
+
+
+            </script>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

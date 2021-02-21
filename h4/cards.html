@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <script src = https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js>
+    </script>
+    <title>Superhero Cards</title>
+    <link rel='stylesheet' href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Staatliches&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <h1 id="heading"> Superhero Cards </h1>
+
+    <div class="filters">
+      <button value ="Avengers"> Avengers</button>
+      <button value = "Guardians"> Guardians of the Galaxy</button>
+      <button value = "TeenTitans"> Teen Titans</button>
+    </div>
+
+    <div class="list">
+
+      <div class = "card Avengers">
+        <p>Hulk</p>
+        <img src="images/hulk.jpg">
+        <p> Incredible superhuman strength, durability, and healing factor. </p>
+      </div>
+
+        <div class = "card Avengers">
+        <p>Thor</p>
+        <img src="images/thor.jpg">
+        <p> God of Lightning</p>
+      </div>
+
+        <div class = "card Avengers">
+        <p>Black Widow</p>
+        <img src="images/blackwidow.jpg">
+        <p> Girl with Gun. </p>
+      </div>
+
+        <div class = "card Avengers">
+        <p>Spiderman</p>
+        <img src="images/spiderman.jpg">
+        <p> Man with spider powers</p>
+      </div>
+
+      <div class = "card Guardians">
+        <p>Groot</p>
+        <img src="images/groot.jpg">
+        <p> Ability to regenerate, can control trees and plants </p>
+      </div>
+
+      <div class = "card Guardians">
+        <p>Groot</p>
+        <img src="images/starlord.jpg">
+        <p> Just a guy </p>
+      </div>
+
+      <div class = "card Guardians">
+        <p>Groot</p>
+        <img src="images/gamora.jpg">
+        <p>green girl </p>
+      </div>
+
+      <div class = "card Avengers">
+        <p> Captain America</p>
+        <img src = "images/america.jpg">
+        <p> Being American</p>
+      </div>
+
+
+      <div class = "card TeenTitans">
+        <p>beast Boy</p>
+        <img src="images/beastboy.jpg">
+        <p>Can turn into any animal. </p>
+      </div>
+
+      <div class = "card TeenTitans">
+        <p>Robin</p>
+        <img src="images/robin.jpg">
+        <p>A boy </p>
+      </div>
+
+      <div class = "card TeenTitans">
+        <p>Starfire</p>
+        <img src="images/starfire.jpg">
+        <p>A girl with alien superpowers </p>
+      </div>
+
+    </div>
+
+    <script>
+      function filterCards(event){
+        var clicked = event.currentTarget;
+        var label = $(clicked).text();
+        $("heading").text(label);
+        $('.card').hide();
+        var selected = $(clicked).val();
+        $('.'+selected).show();
+        $('#heading').text(label);
+
+
+
+      }
+      $('button').click(filterCards);
+
+
+      </script>
+
+
+
+
+
+    </script>
+  </body>
+</html>
+<script type = "application/javascript" src = "/share.js"></script>

@@ -1,0 +1,32 @@
+body {
+  background-color: gray;  /* Sets the background color of page */
+
+  font-family: 'Ubuntu Condensed', sans-serif; /* Sets the font of text */
+  text-align: center; /* Sets the text alignment to center */
+  color: white; /* Set the text color to white */
+  font-size: 18px; /* Sets the size of text */
+
+  width: 300px; /* Changes the width of body */
+  margin: auto; /* Centers the content in body tag horizontally, we will learn more about this property in next lessons */
+}
+
+h1 {
+  font-weight: normal; /* Changes the font-weight to normal */
+  color: gold; /* Gives us golden color heading */
+  font-size: 64px; /* Sets the size of heading text */
+  font-family: 'Rye', cursive; /* Sets the font of heading text */
+}
+
+button{
+  font-size: 15px;
+  background-color: white;
+  color:black;
+
+}
+
+p{
+  border-style: solid;
+  border-color: black;
+
+
+}
